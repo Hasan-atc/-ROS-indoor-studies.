@@ -17,6 +17,10 @@ Hello researchers. In this project, I will present my works that I have done in 
 # Initialization ⭐
 !! Before starting this phase, you should make sure that the above requirements are fully met !!
 
+!! After installing ROS and Turtlebot3, do not forget to make catkin_make in the catkin_ws file !!
+
+!!Then you can locate the labirent_ortam.launch file wherever you want and run it with roslaunch. I preferably put it in turtlebot3_simulations/turtlebot3_gazebo/launch file !!
+
 1️⃣ Let's run the Gazebo environment
 ````
 cd catkin_ws
@@ -27,7 +31,7 @@ rosluanch turtlebot3_gazebo labirent_ortam.launch
 Turtlebot2 :  
 ````
 -> roslaunch turtlebot_navigation gmapping_demo.launch
--> roslaunch turtlebot_rviz_launchers view_navigation.launch
+-> roslaunch turtlebot_rviz_launchers view_navigation.launch (Don't forget to replace the map in view_navigation.launch with your own map's .yaml file.)
 -> roslaunch turtlebot_teleop turtlebot_teleop_key.launch
 ````
 
@@ -57,7 +61,7 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 First of all, in this project, I keep my codes under the catkin_ws/src/codes/scripts file. You can find the pyqt5 design files in the ui_file file.
 ````
 roslaunch turtlebot3_gazebo labirent_ortam.launch
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch (Don't forget to replace the map in view_navigation.launch with your own map's .yaml file.)
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch (The robot needs to go around a full turn in order to fully understand its location)
 ````
 ````
